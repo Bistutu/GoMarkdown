@@ -61,10 +61,6 @@ func main() {
 }
 ```
 
-## 文档
-
-有关详细的使用方法和所有可用函数，请参阅 [GoDoc 文档](https://pkg.go.dev/github.com/Bistutu/GoMarkdown)。
-
 ## 贡献
 
 欢迎贡献！参与贡献的方法：
