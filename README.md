@@ -27,7 +27,7 @@ GoMarkdown is a Go library for generating Markdown documents programmatically. I
 To install GoMarkdown, use the following `go get` command:
 
 ```bash
-go get github.com/Bistutu/GoMarkdown
+go get github.com/Bistutu/GoMarkdown@latest
 ```
 
 ## Usage
