@@ -5,6 +5,11 @@ import (
 	"strings"
 )
 
+// Text generates plain text.
+func (mw *markdownWriter) Text(text string) error {
+	return mw.writeLine(text)
+}
+
 // H1 generates a level 1 heading
 func (mw *markdownWriter) H1(text string) error {
 	return mw.writeLine(fmt.Sprintf("# %s", text))
