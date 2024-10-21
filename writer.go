@@ -11,13 +11,13 @@ const (
 	markdownSuffix = ".md"
 )
 
-type markdownWriter struct {
+type MarkdownWriter struct {
 	file *os.File
 }
 
-// NewMarkdownWriter creates a new markdownWriter instance and opens the file.
+// NewMarkdownWriter creates a new MarkdownWriter instance and opens the file.
 // If the directory in the filename does not exist, it will be created.
-func NewMarkdownWriter(filename string, append bool) (*markdownWriter, error) {
+func NewMarkdownWriter(filename string, append bool) (*MarkdownWriter, error) {
 	// Ensure the filename ends with .md
 	if !strings.HasSuffix(filename, markdownSuffix) {
 		filename += markdownSuffix
@@ -42,10 +42,10 @@ func NewMarkdownWriter(filename string, append bool) (*markdownWriter, error) {
 	if err != nil {
 		return nil, fmt.Errorf("failed to open file: %v", err)
 	}
-	return &markdownWriter{file: file}, nil
+	return &MarkdownWriter{file: file}, nil
 }
 
 // Close closes the file
-func (mw *markdownWriter) Close() error {
+func (mw *MarkdownWriter) Close() error {
 	return mw.file.Close()
 }

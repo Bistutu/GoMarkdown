@@ -6,7 +6,7 @@ import (
 
 // TestMarkdownWriter tests all the functions of the gomarkdown package
 func TestMarkdownWriter(t *testing.T) {
-	// Create a new markdownWriter instance
+	// Create a new MarkdownWriter instance
 
 	mw, err := NewMarkdownWriter("example", false)
 	if err != nil {
